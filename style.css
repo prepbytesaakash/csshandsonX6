@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body {
+      margin: 0;
+      padding: 0;
+      background-color: yellow;
+    }
+     h1 {
+      text-align: center;
+      margin-bottom: 80px;
+      color: black;
+    }
+    div {
+      margin: 20px 20px;
+    }
+     ol {
+      margin: 0px 300px 150px 300px;
+    }
+     li {
+      margin-bottom: 80px;
+    
+      box-sizing: border-box;
+    }
+     .square-1,
+    .square-2,
+    .square-3,
+    .square-4a,
+    .square-4b,
+    .square-4c {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+      .square-1 {
+      background-color:cadetblue;
+      /* animation */
+      animation: square_1 2s infinite;
+    }
+  
+   
+    @keyframes square_1 {
+     /* 0% {
+        transform: rotate(0deg);
+      }*/
+      25% {
+        transform: skewx(15deg);
+      }
+       100%{
+        transform: skewx(-15deg);
+      } 
+    
+    }
+    
+    .square-2 {
+      background-color: grey;
+      position: relative;
+      /*  */
+      transform-origin: right;
+      
+      animation: rescale 3s infinite;
+    }
+    @keyframes rescale {
+      25% {
+        transform: skew(15deg,15deg);
+      }
+      100% {
+        transform: skew(-15deg,-15deg);
+      }
+  
+     
+    }
+    
+    .square-3 {
+      background-color:cadetblue;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode;*/
+      position: relative;
+      animation: square_3 2s infinite;
+    }
+    
+    @keyframes square_3 {
+     /* 0% {
+        transform: rotate(0deg);
+      }*/
+      100% {
+        transform: rotate(1turn);
+      }
+    }
+    .target-list {
+  
+      height: 200px;
+    }
+    .square-4a {
+      background-color: blue;
+      /* animation */
+      animation: square-4a 3s infinite;
+      position: static;
+    }
+    @keyframes square-4a {
+      0% {
+        height: 100px;
+      
+      }
+      100% {
+        height:150px;
+        transform: scaleY(1.2);
+        
+        box-sizing: border-box;
+      }
+    }
+    
+    .square-4b {
+      background-color: grey;
+      /* animation */
+      margin: 5vh 3vw;
+      animation: square-4b 3s infinite;
+    }
+    @keyframes square-4b {
+      0% {
+        width: 100px;
+      }
+      50% {
+       
+        transform: scaleX(1.8);
+        
+    
+        box-sizing: border-box;
+      }
+      100% {
+        
+        transform: scaleX(0.5);
+        
+        box-sizing: border-box;
+      }
+    }
+    .square-4c {
+      background-color: green;
+      /* animation */
+      animation: square-4c 3s infinite;
+    }
+    @keyframes square-4c {
+      0% {
+        transform: rotate(0turn);
+      }
+      50% {
+        transform: rotate(-0.25turn);
+      }
+      100% {
+        transform: rotate(0.008turn);
+      }
+    }
+    
+    /* ****Animation page**** */
+    ol,
+    li {
+      text-align: center;
+    }
+    .item,
+    .box2 {
+      /* margin: 0 auto; */
+      width: 200px;
+      height: 200px;
+      background-color:orange;
+      /* position: relative;
+      animation-name: box_1;
+      animation-duration: 5s;
+      animation-iteration-count: 2; */
+    }
+    
+    .item:hover {
+      width: 200px;
+      height: 200px;
+      background-color: lightgreen;
+      position: relative;
+      animation-name: box_1;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes box_1 {
+      from {
+        width: 200px;
+      }
+      to {
+        width: 600px;
+      }
+    }
+    .box2:hover {
+      width: 200px;
+      height: 200px;
+      background-color: lightgreen;
+      position: relative;
+      animation-name: box_2;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+    @keyframes box_2 {
+      0% {
+        width: 200px;
+      }
+      50% {
+        width: 400px;
+        height: 200px;
+      }
+      100% {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    .box1 {
+      animation-timing-function: linear;
+    }
+    .box2 {
+      animation-timing-function: ease;
+    }
+    .box3 {
+      animation-timing-function: ease-in;
+    }
+    .box4 {
+      animation-timing-function: ease-out;
+    }
+    .box5 {
+      animation-timing-function: ease-in-out;
+    }
+    .box6 {
+      animation-timing-function: step-start;
+    }
+    .box7 {
+      animation-timing-function: linear;
+    }
+    
